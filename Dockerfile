@@ -10,4 +10,4 @@ RUN mkdir -p /var/lib/ghost/content/adapters/storage
 
 RUN mkdir -p /var/lib/ghost/content/adapters/storage/s3
 
-RUN cp -r /var/lib/ghost/current/node_modules/ghost-storage-adapter-s3 /var/lib/ghost/content/adapters/storage/s3
+RUN cp -r /var/lib/ghost/current/node_modules/ghost-storage-base /var/lib/ghost/content/adapters/storage/s3
