@@ -7,12 +7,15 @@ COPY . /var/lib/ghost/current
 #COPY config.production.json /var/lib/ghost/
 
 RUN npm install ghost-storage-adapter-s3
-COPY entrypoint-wrapper.sh /usr/local/bin
-ENTRYPOINT ["sh","entrypoint-wrapper.sh"]
+#COPY entrypoint-wrapper.sh /usr/local/bin
+#ENTRYPOINT ["sh","entrypoint-wrapper.sh"]
 
 
 
-#RUN  mkdir -p /content/adapters/storage/s3/
+RUN mkdir -p ./content/adapters/storage
+
+RUN ln -s ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
+
 #RUN  touch  /content/adapters/storage/s3/test.txt
 #Run  ls    /content/adapters/storage/s3/
 
