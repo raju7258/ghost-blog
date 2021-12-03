@@ -8,7 +8,7 @@ COPY config.production.json /var/lib/ghost/
 
 RUN npm install ghost-storage-adapter-s3
 COPY entrypoint-wrapper.sh /usr/local/bin
-ENTRYPOINT ["entrypoint-wrapper.sh"]
+ENTRYPOINT ["bash","entrypoint-wrapper.sh"]
 
 
 
