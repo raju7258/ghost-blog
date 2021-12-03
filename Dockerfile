@@ -4,7 +4,7 @@ WORKDIR /var/lib/ghost
 
 COPY . /var/lib/ghost/current
 
-COPY config.production.json /var/lib/ghost/
+#COPY config.production.json /var/lib/ghost/
 
 RUN npm install ghost-storage-adapter-s3
 
