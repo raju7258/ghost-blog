@@ -10,6 +10,7 @@ RUN npm install ghost-storage-adapter-s3
 
 
 RUN  mkdir -p /content/adapters/storage/s3
+Run ls    /content/adapters/storage/
 
 #RUN  cd /var/lib/ghost/content/adapters/storage/s3/
 #RUN  chmod -R 755  var/lib/ghost/content/adapters/storage/s3/
