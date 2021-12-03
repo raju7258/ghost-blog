@@ -4,16 +4,6 @@
     "port": 2368,
     "host": "0.0.0.0"
   },
-  "database": {
-    "client": "mysql",
-    "connection": {
-      "host": "DATABASE_HOST",
-      "port": 3306,
-      "user": "DATABASE_USER",
-      "password": "DATABASE_PASSWORD",
-      "database": "DATABASE_NAME",
-    }
-  },
   "storage": {
   "active": "s3",
   "s3": {
