@@ -9,15 +9,8 @@
   "s3": {
     "accessKeyId": "",
     "secretAccessKey": "",
-    "region": "eu-west-1",
-    "bucket": "ahmed-clone",
-    "assetHost": "YOUR_OPTIONAL_CDN_URL (See note 1 below)",
-    "signatureVersion": "REGION_SIGNATURE_VERSION (See note 5 below)",
-    "pathPrefix": "YOUR_OPTIONAL_BUCKET_SUBDIRECTORY",
-    "endpoint": "YOUR_OPTIONAL_ENDPOINT_URL (only needed for 3rd party S3 providers)",
-    "serverSideEncryption": "YOUR_OPTIONAL_SSE (See note 2 below)",
-    "forcePathStyle": true,
-    "acl": "YOUR_OPTIONAL_ACL (See note 4 below)",
+    "region": "us-east-1",
+    "bucket": "ghost-s3-contents",
      }
    },
   "mail": {
