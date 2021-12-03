@@ -9,8 +9,8 @@
   "s3": {
     "accessKeyId": "YOUR_ACCESS_KEY_ID",
     "secretAccessKey": "YOUR_SECRET_ACCESS_KEY",
-    "region": "YOUR_REGION_SLUG",
-    "bucket": "YOUR_BUCKET_NAME",
+    "region": "eu-west-1",
+    "bucket": "ahmed-clone",
     "assetHost": "YOUR_OPTIONAL_CDN_URL (See note 1 below)",
     "signatureVersion": "REGION_SIGNATURE_VERSION (See note 5 below)",
     "pathPrefix": "YOUR_OPTIONAL_BUCKET_SUBDIRECTORY",
