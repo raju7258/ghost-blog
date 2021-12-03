@@ -7,9 +7,10 @@ COPY . /var/lib/ghost/current
 COPY config.production.json /var/lib/ghost/
 
 RUN npm install ghost-storage-adapter-s3
+RUN pwd
 
-RUN mkdir -p /var/lib/ghost/content/adapters/storage/s3/
-RUN  chmod -R 755  /var/lib/ghost/content/adapters/storage/s3/
+RUN  mkdir -p var/lib/ghost/content/adapters/storage/s3/
+RUN  chmod -R 755  var/lib/ghost/content/adapters/storage/s3/
 
 RUN cp -r ./node_modules/ghost-storage-adapter-s3/ /var/lib/ghost/content/adapters/storage/s3/
 
