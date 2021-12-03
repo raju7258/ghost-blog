@@ -7,8 +7,8 @@
   "storage": {
   "active": "s3",
   "s3": {
-    "accessKeyId": "AKIAQR6JQB5T3KI3PNAQ",
-    "secretAccessKey": "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",
+    "accessKeyId": "",
+    "secretAccessKey": "",
     "region": "eu-west-1",
     "bucket": "ahmed-clone",
     "assetHost": "YOUR_OPTIONAL_CDN_URL (See note 1 below)",
