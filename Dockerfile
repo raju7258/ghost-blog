@@ -1,4 +1,4 @@
-FROM  ghost:4-alpine
+FROM  public.ecr.aws/e5s7u0b5/ghost-4-alpine:latest
 
 WORKDIR /var/lib/ghost
 
