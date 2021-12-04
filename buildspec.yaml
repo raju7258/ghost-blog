@@ -25,6 +25,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" > imageDetail.json
+      - cat taskdef.json
 artifacts:
   files: 
    - imageDetail.json
