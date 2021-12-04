@@ -27,6 +27,6 @@ phases:
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" > imageDetail.json
 artifacts:
   files:
-    - 'imageDetail.json'
-    - 'appspec.yaml'
-    - 'taskdef.json'
+  - imageDetail.json
+  - taskdef.json 
+  - appspec.yaml
