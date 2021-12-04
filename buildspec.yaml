@@ -12,8 +12,6 @@ phases:
       - echo "$IMAGE_URI"
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
       - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
-      - mkdir outputs
-      
     
   build:
     commands:
@@ -26,9 +24,18 @@ phases:
       - echo Build stage successfully completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
-      - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" >  ../outputs/imageDetail.json
+      - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" > imageDetail.json
       - echo Here are the files `ls`
 artifacts:
-  files:
-  - outputs/*
-  discard-paths: yes
+  files: 
+    - 'image*.json'
+    - 'appspec.yaml'
+    - 'taskdef.json'
+  secondary-artifacts:
+    DefinitionArtifact:
+      files:
+        - appspec.yaml
+        - taskdef.json
+    ImageArtifact:
+      files:
+        - imageDetail.json
