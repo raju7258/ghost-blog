@@ -28,6 +28,6 @@ phases:
 artifacts:
   files:
   - imageDetail.json
-   - appspec.yml
-   - taskdef.json
+  - appspec.yml
+  - taskdef.json
   discard-paths: yes
