@@ -1,31 +1,36 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::038540414823:role/ecsTaskExecutionRole",
-  "containerDefinitions": [
-    {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "secretOptions": null,
-        "options": {
-          "awslogs-group": "/ecs/ghost-logs",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "entryPoint": null,
-      "portMappings": [
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::038540414823:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
         {
-          "hostPort": 2368,
-          "protocol": "tcp",
-          "containerPort": 2368
-        }
-      ],
-      "command": null,
-      "linuxParameters": null,
-      "cpu": 0,
-      "environment": [
+            "dnsSearchDomains": null,
+            "environmentFiles": null,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "secretOptions": null,
+                "options": {
+                    "awslogs-group": "/ecs/ghost",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "entryPoint": null,
+            "portMappings": [
+                {
+                    "hostPort": 2368,
+                    "protocol": "tcp",
+                    "containerPort": 2368
+                }
+            ],
+            "command": [],
+            "linuxParameters": null,
+            "cpu": 0,
+            "environment": [
+                
+                {
+                    "name": "database__connection__password",
+                    "value": "password2021"
+                },
                 {
                     "name": "AWS_DEFAULT_REGION",
                     "value": "us-east-1"
@@ -42,13 +47,11 @@
                     "name": "url",
                     "value": "http://localhost:8080"
                 },
-                {
+      
                 {
                     "name": "storage__s3__bucket",
                     "value": "ghost-s3-contents"
                 },
-                {
-
                 {
                     "name": "database__connection__user",
                     "value": "admin"
@@ -66,10 +69,6 @@
                     "value": "us-east-1"
                 },
                 {
-                    "name": "database__connection__password",
-                    "value": "password2021"
-                },
-                {
                     "name": "database__client",
                     "value": "mysql"
                 },
@@ -78,43 +77,44 @@
                     "value": "s3"
                 }
             ],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
-      "mountPoints": [
-        {
-          "readOnly": null,
-          "containerPath": "/var/lib/ghost/content",
-          "sourceVolume": "contents"
+            "resourceRequirements": null,
+            "ulimits": null,
+            "dnsServers": null,
+            "mountPoints": [
+                {
+                    "readOnly": null,
+                    "containerPath": "/var/lib/ghost/content",
+                    "sourceVolume": "contents"
+                }
+            ],
+            "workingDirectory": null,
+            "secrets": null,
+            "dockerSecurityOptions": null,
+            "memory": null,
+            "memoryReservation": null,
+            "volumesFrom": [],
+            "stopTimeout": null,
+            "image": "<IMAGE1_NAME>",
+            "startTimeout": null,
+            "firelensConfiguration": null,
+            "dependsOn": null,
+            "disableNetworking": null,
+            "interactive": null,
+            "healthCheck": null,
+            "essential": true,
+            "links": null,
+            "hostname": null,
+            "extraHosts": null,
+            "pseudoTerminal": null,
+            "user": null,
+            "readonlyRootFilesystem": null,
+            "dockerLabels": null,
+            "systemControls": null,
+            "privileged": null,
+            "name": "ghost-cont"
         }
-      ],
-      "workingDirectory": null,
-      "dockerSecurityOptions": null,
-      "memory": null,
-      "memoryReservation": null,
-      "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "<IMAGE1_NAME>",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "systemControls": null,
-      "privileged": null,
-      "name": "ghost-con"
-    }
-  ],
-   "memory": "4096",
+    ],
+    "memory": "4096",
     "taskRoleArn": "arn:aws:iam::038540414823:role/ecsTaskExecutionRole",
     "family": "ghost",
     "pidMode": null,
