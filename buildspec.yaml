@@ -29,6 +29,4 @@ phases:
       - cp appspec.yaml  ../outputs
 artifacts:
   files:
-  - imageDetail.json
-  - taskdef.json 
-  - appspec.yaml
+  - outputs/*
