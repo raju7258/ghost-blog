@@ -26,7 +26,8 @@ phases:
       - docker push $IMAGE_URI
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" >  ../outputs/imageDetail.json
       - cp ../taskdef.json  ../outputs
-      - cp appspec.yaml  ../outputs
+      - cp ../appspec.yaml  ../outputs
 artifacts:
   files:
   - outputs/*
+  discard-paths: yes
