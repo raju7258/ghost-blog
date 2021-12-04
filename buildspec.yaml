@@ -27,6 +27,7 @@ phases:
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" >  ../outputs/imageDetail.json
       - cp ../taskdef.json  ../outputs
       - cp ../appspec.yaml  ../outputs
+      - ls ../outputs
 artifacts:
   files:
   - outputs/*
