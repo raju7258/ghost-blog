@@ -13,6 +13,9 @@ phases:
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
       - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
       - mkdir outputs
+      - cp ../taskdef.json  ../outputs
+      - cp ../appspec.yaml  ../outputs
+    
   build:
     commands:
       - echo Build started on `date`
@@ -25,9 +28,6 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" >  ../outputs/imageDetail.json
-      - cp ../taskdef.json  ../outputs
-      - cp ../appspec.yaml  ../outputs
-      - ls ../outputs
 artifacts:
   files:
   - outputs/*
