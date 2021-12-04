@@ -140,5 +140,9 @@
             "dockerVolumeConfiguration": null
         }
     ],
-    "tags": []
+    "tags": [
+        {
+            "key": "image",
+            "value": "ghost"
+        }
 }
