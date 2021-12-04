@@ -12,6 +12,7 @@ phases:
       - echo "$IMAGE_URI"
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
       - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
+      - mkdir output
     
   build:
     commands:
@@ -25,10 +26,12 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
       - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" > imageDetail.json
-      - cat taskdef.json
+      - cp taskdef.json ../output
+      - cp appspec.yaml ../output
 artifacts:
   files: 
    - imageDetail.json
    - appspec.yml
-   - taskdef.json
+   - taskdef.json 
+   - output/*
   discard-paths: yes
