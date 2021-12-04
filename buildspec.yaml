@@ -24,7 +24,9 @@ phases:
       - echo Build stage successfully completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_URI
-      - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" > imageDetail.json
+      - printf '{"name":"ghost","imageUri":"%s"}' "$IMAGE_URI" >  ../outputs/imageDetail.json
+      - cp ../taskdef.json  ../outputs
+      - cp appspec.yaml  ../outputs
 artifacts:
   files:
   - imageDetail.json
