@@ -64,11 +64,11 @@
                     "value": "s3"
                 },
                 {
-                  "name": "storage__s3__accessKeyId"
+                  "name": "storage__s3__accessKeyId",
                   "value": "AWS_ACCESS_KEY_ID"
                 },
                 {
-                  "name": "storage__s3__secretAccessKey"
+                  "name": "storage__s3__secretAccessKey",
                   "value": "AWS_SECRET_ACCESS_KEY_ID"
                 }
             ],
@@ -138,8 +138,8 @@
     "tags": [
         {
             "key": "image",
-            "value": "ghost"
-            "env": "ENV"
+            "value": "ghost",
+            "environment": "ENV"
         }
         ]
 }
