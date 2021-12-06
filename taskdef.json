@@ -121,7 +121,7 @@
         "operatingSystemFamily": "LINUX",
         "cpuArchitecture": null
     },
-    "cpu": "1048",
+    "cpu": "1024",
     "inferenceAccelerators": [],
     "proxyConfiguration": null,
     "volumes": [
