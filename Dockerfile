@@ -15,4 +15,4 @@ RUN npm install ghost-storage-adapter-s3
 
 RUN mkdir -p ./content/adapters/storage && cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
 
-RUN yum update -y
+RUN apk update
