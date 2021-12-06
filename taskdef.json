@@ -159,8 +159,13 @@
       "name": "ecs.capability.task-eni"
     }
     ],
+    "placementConstraints": [],
     "memory": "2048",
     "taskRoleArn": "TASK_EXECUTION_ROLE",
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
     "family": "GHOST_FAMILY",
     "pidMode": null,
     "requiresCompatibilities": [
@@ -173,7 +178,9 @@
     },
     "cpu": "1024",
     "inferenceAccelerators": [],
+    "revision": TASK_DEFINITION_REVISION,
     "proxyConfiguration": null,
+    "taskDefinitionArn": "TASK_DEFINITION_ARN:TASK_DEFINITION_REVISION",
     "volumes": [
         {
             "fsxWindowsFileServerVolumeConfiguration": null,
