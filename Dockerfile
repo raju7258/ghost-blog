@@ -1,4 +1,4 @@
-FROM ghost:4-alpine
+FROM ghost
 
 WORKDIR /var/lib/ghost
 
