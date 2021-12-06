@@ -8,11 +8,11 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "secretOptions": null,
-#                "options": {
-#                    "awslogs-group": "/ecs/ghost",
-#                    "awslogs-region": "AWS_REGION",
-#                    "awslogs-stream-prefix": "ecs"
-#                }
+                "options": {
+                    "awslogs-group": "/ecs/ghost",
+                    "awslogs-region": "AWS_REGION",
+                    "awslogs-stream-prefix": "ecs"
+                }
             },
             "entryPoint": null,
             "portMappings": [
