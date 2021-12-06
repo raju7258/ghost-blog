@@ -24,6 +24,8 @@ phases:
       - sed -i "s|GHOST_FAMILY|$GHOST_FAMILY|g" taskdef.json
       - sed -i "s|ENV|$ENV|g" taskdef.json
       - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" taskdef.json
+      - sed -i "s|TASK_DEFINITION_REVISION|$TASK_DEFINITION_REVISION|g" taskdef.json
+      - sed -i "s|TASK_DEFINITION_ARN|$TASK_DEFINITION_ARN|g" taskdef.json
       - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" appspec.yaml
   build:
     commands:
