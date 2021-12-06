@@ -12,7 +12,7 @@ phases:
       - echo "$IMAGE_URI"
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
       - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
-      - mkdir outputs
+      - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" appspec.yaml
   build:
     commands:
       - echo Build started on `date`
