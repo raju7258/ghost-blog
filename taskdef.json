@@ -9,7 +9,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ghost",
+                    "awslogs-group": "/ecs/GHOST_FAMILY",
                     "awslogs-region": "AWS_REGION",
                     "awslogs-stream-prefix": "ecs"
                 }
