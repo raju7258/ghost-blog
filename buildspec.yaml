@@ -23,6 +23,7 @@ phases:
       - sed -i "s|AWS_SECRET_ACCESS_KEY_ID|$GHOST_AWS_SECRET_ACCESS_KEY_ID|g" taskdef.json
       - sed -i "s|GHOST_FAMILY|$GHOST_FAMILY|g" taskdef.json
       - sed -i "s|ENV|$ENV|g" taskdef.json
+      - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" taskdef.json
       - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" appspec.yaml
   build:
     commands:
