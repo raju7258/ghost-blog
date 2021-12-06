@@ -29,7 +29,7 @@
                 
                 {
                     "name": "database__connection__password",
-                    "value": "DATABASE_PASSWORD"
+                    "value": "GHOST_DATABASE_PASSWORD"
                 },
                 {
                     "name": "database__connection__host",
