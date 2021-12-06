@@ -12,6 +12,17 @@ phases:
       - echo "$IMAGE_URI"
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
       - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
+      - sed -i "s|TASK_EXECUTION_ROLE|$TASK_EXECUTION_ROLE|g" taskdef.json
+      - sed -i "s|AWS_REGION|$AWS_REGION|g" taskdef.json
+      - sed -i "s|GHOST_DATABASE_PASSWORD|$GHOST_DATABASE_PASSWORD|g" taskdef.json
+      - sed -i "s|GHOST_DATABASE_HOST|$GHOST_DATABASE_HOST|g" taskdef.json
+      - sed -i "s|GHOST_ASSET_S3_BUCKET|$GHOST_ASSET_S3_BUCKET|g" taskdef.json
+      - sed -i "s|GHOST_DATABASE_USER|$GHOST_DATABASE_USER|g" taskdef.json
+      - sed -i "s|GHOST_DATABASE_NAME|$GHOST_DATABASE_NAME|g" taskdef.json
+      - sed -i "s|AWS_ACCESS_KEY_ID|$AWS_ACCESS_KEY_ID|g" taskdef.json
+      - sed -i "s|AWS_SECRET_ACCESS_KEY_ID|$AWS_SECRET_ACCESS_KEY_ID|g" taskdef.json
+      - sed -i "s|GHOST_FAMILY|$GHOST_FAMILY|g" taskdef.json
+      - sed -i "s|ENV|$ENV|g" taskdef.json
       - sed -i "s|CONTAINER_NAME|$GHOST_CONTAINER_NAME|g" appspec.yaml
   build:
     commands:
@@ -28,5 +39,5 @@ phases:
 artifacts:
   files:
   - imageDetail.json
-  - appspec.yml
+  - appspec.yaml
   - taskdef.json
