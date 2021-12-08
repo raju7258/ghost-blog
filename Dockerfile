@@ -15,6 +15,8 @@ RUN npm install ghost-storage-adapter-s3
 
 RUN mkdir -p ./content/adapters/storage && mkdir -p ./content.orig/adapters/storage && cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3 && cp -vr ./node_modules/ghost-storage-adapter-s3 ./content.orig/adapters/storage/s3
 
+COPY content/settings/routes.yaml ./content.orig/settings/routes.yaml
+
 #RUN apk update
 
 #RUN echo "Healthcheck success" > /var/lib/ghost/current/robots.txt
