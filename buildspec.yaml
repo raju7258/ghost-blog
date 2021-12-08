@@ -18,6 +18,7 @@ phases:
       - sed -i "s|GHOST_DATABASE_HOST|$GHOST_DATABASE_HOST|g" taskdef.json
       - sed -i "s|GHOST_ASSET_S3_BUCKET|$GHOST_ASSET_S3_BUCKET|g" taskdef.json
       - sed -i "s|GHOST_DATABASE_USER|$GHOST_DATABASE_USER|g" taskdef.json
+      - sed -i "s|GHOST_URL|$GHOST_URL|g" taskdef.json
       - sed -i "s|GHOST_DATABASE_NAME|$GHOST_DATABASE_NAME|g" taskdef.json
       - sed -i "s|AWS_ACCESS_KEY_ID|$GHOST_AWS_ACCESS_KEY_ID|g" taskdef.json
       - sed -i "s|AWS_SECRET_ACCESS_KEY_ID|$GHOST_AWS_SECRET_ACCESS_KEY_ID|g" taskdef.json
