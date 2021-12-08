@@ -17,6 +17,6 @@ RUN mkdir -p ./content/adapters/storage && cp -r ./node_modules/ghost-storage-ad
 
 RUN apk update
 
-RUN echo "Healthcheck success" > /var/lib/ghost/robots.txt
+RUN echo "Healthcheck success" > /var/lib/ghost/current/robots.txt
 
 EXPOSE 2368
