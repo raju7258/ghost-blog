@@ -39,10 +39,10 @@
                     "name": "storage__s3__region",
                     "value": "AWS_REGION"
                 },
-#                {
-#                    "name": "url",
-#                    "value": "https://GHOST_URL"
-#                },
+                {
+                    "name": "url",
+                    "value": "http://GHOST_URL"
+                },
                 {
                     "name": "storage__s3__bucket",
                     "value": "GHOST_ASSET_S3_BUCKET"
