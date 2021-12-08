@@ -48,7 +48,7 @@
                     "value": "GHOST_ASSET_S3_BUCKET"
                 },
                 {
-                    "name": "GHOST_STORAGE_ADAPTER_S3_PATH_BUCKET"
+                    "name": "GHOST_STORAGE_ADAPTER_S3_PATH_BUCKET",
                     "value": "GHOST_ASSET_S3_BUCKET"
                 },    
                 {
