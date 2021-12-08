@@ -70,6 +70,7 @@
                 {
                     "name": "GHOST_STORAGE_ADAPTER_S3_SSE",
                     "value": "SSE-KMS"
+                }   
   #              {
   #                "name": "storage__s3__accessKeyId",
   #                "value": "AWS_ACCESS_KEY_ID"
