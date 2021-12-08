@@ -41,7 +41,7 @@
                 },
                 {
                     "name": "url",
-                    "value": "http://GHOST_URL:2368"
+                    "value": "https://GHOST_URL"
                 },
                 {
                     "name": "storage__s3__bucket",
