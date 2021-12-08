@@ -13,10 +13,10 @@ COPY . /var/lib/ghost/current
 ############
 RUN npm install ghost-storage-adapter-s3
 
-RUN mkdir -p ./content/adapters/storage && cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3 && ls -al ./content/adapters/storage/s3
+RUN mkdir -p ./content/adapters/storage && cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
 
-RUN apk update
+#RUN apk update
 
-RUN echo "Healthcheck success" > /var/lib/ghost/current/robots.txt
+#RUN echo "Healthcheck success" > /var/lib/ghost/current/robots.txt
 
-EXPOSE 2368
+#EXPOSE 2368
