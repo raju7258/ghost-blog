@@ -48,6 +48,10 @@
                     "value": "GHOST_ASSET_S3_BUCKET"
                 },
                 {
+                    "name": "GHOST_STORAGE_ADAPTER_S3_PATH_BUCKET"
+                    "value": "GHOST_ASSET_S3_BUCKET"
+                },    
+                {
                     "name": "database__connection__user",
                     "value": "GHOST_DATABASE_USER"
                 },
@@ -63,14 +67,14 @@
                     "name": "storage__active",
                     "value": "s3"
                 },
-                {
-                  "name": "storage__s3__accessKeyId",
-                  "value": "AWS_ACCESS_KEY_ID"
-                },
-                {
-                  "name": "storage__s3__secretAccessKey",
-                  "value": "AWS_SECRET_ACCESS_KEY_ID"
-                }
+  #              {
+  #                "name": "storage__s3__accessKeyId",
+  #                "value": "AWS_ACCESS_KEY_ID"
+  #              },
+  #              {
+  #                "name": "storage__s3__secretAccessKey",
+  #                "value": "AWS_SECRET_ACCESS_KEY_ID"
+  #              }
             ],
             "resourceRequirements": null,
             "ulimits": null,
