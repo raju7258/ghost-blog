@@ -69,7 +69,7 @@
                 },
                 {
                     "name": "GHOST_STORAGE_ADAPTER_S3_SSE",
-                    "value": "AES256"
+                    "value": "aws:kms"
                 }   
   #              {
   #                "name": "storage__s3__accessKeyId",
