@@ -9,13 +9,13 @@
   "s3": {
     "accessKeyId": "ACCESS_KEY_ID",
     "secretAccessKey": "SECRET_ACCESS_KEY",
-    "region": "us-east-1",
-    "bucket": "ghost-s3-contents",
+    "region": "AWS_REGION",
+    "bucket": "BUCKET_NAME",
     "assetHost": "YOUR_OPTIONAL_CDN_URL (See note 1 below)",
-    "signatureVersion": "REGION_SIGNATURE_VERSION (See note 5 below)",
+    "signatureVersion": "v4",
     "pathPrefix": "YOUR_OPTIONAL_BUCKET_SUBDIRECTORY",
     "endpoint": "YOUR_OPTIONAL_ENDPOINT_URL (only needed for 3rd party S3 providers)",
-    "serverSideEncryption": "SSE-S3",
+    "serverSideEncryption": "aws:kms",
     "forcePathStyle": true,
     "acl": "YOUR_OPTIONAL_ACL (See note 4 below)",
     }
