@@ -73,7 +73,7 @@
                 },
                 {
                     "name": "GHOST_STORAGE_ADAPTER_S3_SIGNATURE_VERSION",
-                    "value": "AWS4-HMAC-SHA256"
+                    "value": "v4"
                 }
   #              {
   #                "name": "storage__s3__accessKeyId",
