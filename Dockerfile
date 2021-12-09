@@ -19,8 +19,6 @@ RUN mkdir -p ./content/adapters/storage && mkdir -p ./content.orig/adapters/stor
 
 #COPY content/settings/routes.yaml ./content.orig/settings/routes.yaml
 
-COPY config.production.json /var/lib/ghost/
-
 #RUN apk update
 
 #RUN echo "Healthcheck success" > /var/lib/ghost/current/robots.txt
