@@ -1,5 +1,5 @@
 {
-  "url": "http://localhost:2368",
+  "url": "http://GHOST_URL",
   "server": {
     "port": 2368,
     "host": "0.0.0.0"
@@ -12,7 +12,7 @@
     "region": "AWS_REGION",
     "bucket": "BUCKET_NAME",
     "assetHost": "YOUR_OPTIONAL_CDN_URL (See note 1 below)",
-    "signatureVersion": "v4",
+    "signatureVersion": "AWS4-HMAC-SHA256",
     "pathPrefix": "YOUR_OPTIONAL_BUCKET_SUBDIRECTORY",
     "endpoint": "YOUR_OPTIONAL_ENDPOINT_URL (only needed for 3rd party S3 providers)",
     "serverSideEncryption": "aws:kms",
