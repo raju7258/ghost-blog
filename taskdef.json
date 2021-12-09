@@ -74,7 +74,7 @@
                 {
                     "name": "GHOST_STORAGE_ADAPTER_S3_SIGNATURE_VERSION",
                     "value": "v4"
-                }
+                },
                 {
                     "name": "AWS_ACCESS_KEY_ID",
                     "value": "AWS_ACCESS_KEY_ID"
