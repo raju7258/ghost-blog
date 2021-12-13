@@ -1,6 +1,6 @@
 {
     "ipcMode": null,
-    "executionRoleArn": "arn:aws:iam::038540414823:role/ecsTaskExecutionRole",
+    "executionRoleArn": "TASK_EXECUTION_ROLE",
     "containerDefinitions": [
         {
             "dnsSearchDomains": null,
@@ -9,8 +9,8 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/ecs/ghost",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-group": "/ecs/GHOST_FAMILY",
+                    "awslogs-region": "AWS_REGION",
                     "awslogs-stream-prefix": "ecs"
                 }
             },
@@ -29,44 +29,35 @@
                 
                 {
                     "name": "database__connection__password",
-                    "value": "password2021"
-                },
-                {
-                    "name": "AWS_DEFAULT_REGION",
-                    "value": "us-east-1"
+                    "value": "GHOST_DATABASE_PASSWORD"
                 },
                 {
                     "name": "database__connection__host",
-                    "value": "ghost-db.cluster-c7foofkf2xt2.us-east-1.rds.amazonaws.com"
+                    "value": "GHOST_DATABASE_HOST"
                 },
                 {
                     "name": "storage__s3__region",
-                    "value": "us-east-1"
+                    "value": "AWS_REGION"
                 },
                 {
                     "name": "url",
-                    "value": "http://localhost:2368"
+                    "value": "http://GHOST_URL"
                 },
-      
                 {
                     "name": "storage__s3__bucket",
-                    "value": "ghost-s3-contents"
-                },
-                {
-                    "name": "database__connection__user",
-                    "value": "admin"
-                },
-                {
-                    "name": "database__connection__database",
-                    "value": "ghost"
+                    "value": "GHOST_ASSET_S3_BUCKET"
                 },
                 {
                     "name": "GHOST_STORAGE_ADAPTER_S3_PATH_BUCKET",
-                    "value": "ghost-s3-contents"
+                    "value": "GHOST_ASSET_S3_BUCKET"
+                },    
+                {
+                    "name": "database__connection__user",
+                    "value": "GHOST_DATABASE_USER"
                 },
                 {
-                    "name": "region",
-                    "value": "us-east-1"
+                    "name": "database__connection__database",
+                    "value": "GHOST_DATABASE_NAME"
                 },
                 {
                     "name": "database__client",
@@ -75,7 +66,27 @@
                 {
                     "name": "storage__active",
                     "value": "s3"
+                },
+                {
+                    "name": "GHOST_STORAGE_ADAPTER_S3_SSE",
+                    "value": "AES256"
+                },
+                {
+                    "name": "GHOST_STORAGE_ADAPTER_S3_SIGNATURE_VERSION",
+                    "value": "v4"
+                },
+                {
+                    "name" : "AWS_DEFAULT_REGION",
+                    "value": "AWS_REGION"
                 }
+  #              {
+  #                "name": "storage__s3__accessKeyId",
+  #                "value": "AWS_ACCESS_KEY_ID"
+  #              },
+  #              {
+  #                "name": "storage__s3__secretAccessKey",
+  #                "value": "AWS_SECRET_ACCESS_KEY_ID"
+  #              }
             ],
             "resourceRequirements": null,
             "ulimits": null,
@@ -111,12 +122,67 @@
             "dockerLabels": null,
             "systemControls": null,
             "privileged": null,
-            "name": "ghost-cont"
+            "name": "CONTAINER_NAME"
         }
     ],
-    "memory": "4096",
-    "taskRoleArn": "arn:aws:iam::038540414823:role/ecsTaskExecutionRole",
-    "family": "ghost",
+    "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    }
+    ],
+    "placementConstraints": [],
+    "memory": "2048",
+    "taskRoleArn": "TASK_EXECUTION_ROLE",
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "family": "GHOST_FAMILY",
     "pidMode": null,
     "requiresCompatibilities": [
         "FARGATE"
@@ -126,9 +192,11 @@
         "operatingSystemFamily": "LINUX",
         "cpuArchitecture": null
     },
-    "cpu": "2048",
+    "cpu": "1024",
     "inferenceAccelerators": [],
+    "revision": TASK_DEFINITION_REVISION,
     "proxyConfiguration": null,
+    "taskDefinitionArn": "TASK_DEFINITION_ARN:TASK_DEFINITION_REVISION",
     "volumes": [
         {
             "fsxWindowsFileServerVolumeConfiguration": null,
@@ -143,7 +211,8 @@
     "tags": [
         {
             "key": "image",
-            "value": "ghost"
+            "value": "ghost",
+            "environment": "ENV"
         }
         ]
 }
